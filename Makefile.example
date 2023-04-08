@@ -1,0 +1,13 @@
+build:
+	GOARCH=amd64 GOOS=linux go build -o grpcexp ./cmd/server
+	zip -jm grpcexp-lambda-linux-x86.zip grpcexp
+
+#upload: build
+#	aws lambda update-function-code --function-name <FUNCTION_NAME> --zip-file fileb://grpcexp-lambda-linux-x86.zip
+
+#request:
+#	curl -X POST \
+#    -H "x-api-key: <API-KEY>" \
+#    -H "Content-Type: application/json" \
+#    -d '{"name": "Jane"}' \
+#    https://<API-GW-ID>.execute-api.ap-southeast-2.amazonaws.com/<STAGE>/greet.v1.GreetService/Greet
