@@ -16,3 +16,10 @@ JSON format expected by API Gateway Lambda Proxy integration.
 
 Since the connect GRPC protocol is simple enough, this should just work™ for 
 unary requests. Well at least that's the theory.
+
+## More Exploration...
+
+I haven't looked into it, but using this new Lambda feature it should also be 
+possible to support streaming responses.
+
+https://aws.amazon.com/blogs/compute/introducing-aws-lambda-response-streaming/
